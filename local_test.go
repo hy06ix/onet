@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"go.dedis.ch/kyber/v3/suites"
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/network"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/network"
 )
 
 var tSuite = suites.MustFind("Ed25519")

@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/stretchr/testify/assert"
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/simul"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/simul"
 )
 
 func TestSimulation(t *testing.T) {

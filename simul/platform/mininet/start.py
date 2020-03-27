@@ -261,6 +261,7 @@ def GetNetworks(filename):
     pos = 0
     totalHosts = 0
     for (server, net, count) in list:
+        dbg(1, "list content", server, net, count)
         totalHosts += int(count)
         t = [server, net, count]
         if ips.find('inet %s/' % server) >= 0:
@@ -305,8 +306,10 @@ if __name__ == '__main__':
         sys.exit(-1)
 
     list_file = sys.argv[1]
+    dbg(1,"list_file %s" % list_file)
     global global_root, myNet, otherNets
     global_root, myNet, otherNets = GetNetworks(list_file)
+    dbg(1,"mynet %s" % myNet)
 
     if myNet:
         dbg( 2, "Cleaning up mininet and logfiles" )
@@ -324,11 +327,12 @@ if __name__ == '__main__':
             dbg( 2, "Starting remotely on nets", otherNets)
         for (server, mn, nbr) in otherNets:
             dbg( 3, "Cleaning up", server )
-            call("ssh -q %s 'mn -c; pkill -9 -f start.py' > /dev/null 2>&1" % server, shell=True)
+            #call("ssh %s 'mn -c; pkill -9 -f start.py' > /dev/null 2>&1" % server, shell=True)
             dbg( 3, "Going to copy things %s to %s and run %s hosts in net %s" % \
                   (list_file, server, nbr, mn) )
             shutil.rmtree('config', ignore_errors=True)
-            call("scp -q * %s %s:" % (list_file, server), shell=True)
+            # call("scp -q * %s %s:" % (list_file, server), shell=True)
+            call("scp * %s %s:" % (list_file, server), shell=True)
             threads.append(threading.Thread(target=call_other, args=[server, list_file]))
 
         time.sleep(1)

@@ -5,7 +5,7 @@ package monitor
 import (
 	"syscall"
 
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 )
 
 // Returns the system and the user CPU time used by the current process so far.

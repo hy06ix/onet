@@ -12,10 +12,10 @@ import (
 
 	"time"
 
-	"go.dedis.ch/onet/v3"
-	"go.dedis.ch/onet/v3/app"
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/simul/monitor"
+	"github.com/csanti/onet"
+	"github.com/csanti/onet/app"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/simul/monitor"
 	"golang.org/x/xerrors"
 )
 

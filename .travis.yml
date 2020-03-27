@@ -3,7 +3,7 @@ language: go
 go:
   - "1.13.x"
 
-go_import_path: go.dedis.ch/onet/v3
+go_import_path: github.com/csanti/onet
 
 script:
   - env GO111MODULE=on make test

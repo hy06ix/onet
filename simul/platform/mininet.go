@@ -18,9 +18,9 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
-	"go.dedis.ch/onet/v3"
-	"go.dedis.ch/onet/v3/app"
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet"
+	"github.com/csanti/onet/app"
+	"github.com/csanti/onet/log"
 	"golang.org/x/xerrors"
 )
 
@@ -291,6 +291,7 @@ func (m *MiniNet) Start(args ...string) error {
 	if err := exCmd.Start(); err != nil {
 		log.Fatal("Failed to start the ssh port forwarding:", err)
 	}
+
 	if err := exCmd.Wait(); err != nil {
 		log.Fatal("ssh port forwarding exited in failure:", err)
 	}

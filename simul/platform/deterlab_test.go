@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 )
 
 func TestDeterlab_parseHosts(t *testing.T) {

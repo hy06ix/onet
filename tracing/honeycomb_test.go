@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 
 	"github.com/stretchr/testify/require"
-	"go.dedis.ch/onet/v3"
+	"github.com/csanti/onet"
 )
 
 func TestLoggingRealHC(t *testing.T) {

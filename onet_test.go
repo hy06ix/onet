@@ -3,7 +3,7 @@ package onet
 import (
 	"testing"
 
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 )
 
 // To avoid setting up testing-verbosity in all tests

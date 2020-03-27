@@ -14,8 +14,8 @@ import (
 
 	"go.dedis.ch/kyber/v3"
 	"go.dedis.ch/kyber/v3/util/key"
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/network"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/network"
 	"golang.org/x/xerrors"
 )
 

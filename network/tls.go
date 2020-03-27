@@ -18,7 +18,7 @@ import (
 	"go.dedis.ch/kyber/v3/sign/schnorr"
 	"go.dedis.ch/kyber/v3/util/encoding"
 	"go.dedis.ch/kyber/v3/util/random"
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 	"golang.org/x/xerrors"
 )
 

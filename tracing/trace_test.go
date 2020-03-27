@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 
 	"github.com/stretchr/testify/require"
 )
@@ -28,20 +28,20 @@ func TestNewStackEntry(t *testing.T) {
 				"runtime/debug", "Stack",
 				"(0x11953ba, 0x1089998, 0xad8eee637bfa)", "", false,
 			}, false,
-		}, {"go.dedis.ch/onet/v3/log.Stack(...)",
+		}, {"github.com/csanti/onet/log.Stack(...)",
 			"/home/foo/onet/log/testutil.go:105",
 			stackEntry{
 				105, "/home/foo/onet/log/",
 				"testutil.go",
-				"go.dedis.ch/onet/v3/log", "Stack",
+				"github.com/csanti/onet/log", "Stack",
 				"(...)", "", false,
 			}, false,
-		}, {"go.dedis.ch/onet/v3/honeycomb.TestNewTrace(0xc0001b2200)",
+		}, {"github.com/csanti/onet/honeycomb.TestNewTrace(0xc0001b2200)",
 			"/home/foo/onet/honeycomb/trace_test.go:19",
 			stackEntry{
 				line: 19, path: "/home/foo/onet" +
 					"/honeycomb/", file: "trace_test.go",
-				pkgPath: "go.dedis.ch/onet/v3/honeycomb", method: "TestNewTrace",
+				pkgPath: "github.com/csanti/onet/honeycomb", method: "TestNewTrace",
 				params: "(0xc0001b2200)",
 			}, false,
 		}, {"testing.tRunner",
@@ -78,11 +78,11 @@ func TestNewStackEntry(t *testing.T) {
 			stackEntry{createdBy: true}, true,
 		},
 		{
-			"go.dedis.ch/onet/v3/honeycomb.(*oneStr).more.(*another).one(" +
+			"github.com/csanti/onet/honeycomb.(*oneStr).more.(*another).one(" +
 				"0x58fe970, 0xc0001f0410, 0x14)",
 			"/home/foo/onet/honeycomb/stack_test.go:32 +0x34",
 			stackEntry{32, "/home/foo/onet/honeycomb/", "stack_test.go",
-				"go.dedis.ch/onet/v3/honeycomb.(*oneStr).more.(*another)",
+				"github.com/csanti/onet/honeycomb.(*oneStr).more.(*another)",
 				"one", "(0x58fe970, 0xc0001f0410, 0x14)", "", false,
 			}, false,
 		},
@@ -105,12 +105,12 @@ func TestParseLogs(t *testing.T) {
 		{
 			`runtime/debug.Stack(0x11953ba, 0x1009c10, 0xc00004ff18)
 			/usr/local/Cellar/go/1.13.3/libexec/src/runtime/debug/stack.go:24 +0xab
-			go.dedis.ch/onet/v3/log.Stack(...)
+			github.com/csanti/onet/log.Stack(...)
 			/home/foo//onet/log/testutil.go:105`,
 			[]stackEntry{
 				{line: 105, path: "/home/foo//onet/log/",
 					file:    "testutil.go",
-					pkgPath: "go.dedis.ch/onet/v3/log", method: "Stack", params: "(...)"},
+					pkgPath: "github.com/csanti/onet/log", method: "Stack", params: "(...)"},
 				{line: 24, path: "/usr/local/Cellar/go/1.13.3/libexec/src/runtime/debug/",
 					file:    "stack.go",
 					pkgPath: "runtime/debug", method: "Stack",
@@ -238,38 +238,38 @@ func TestMerge(t *testing.T) {
 }
 
 var testMergeStack = [][]string{{`goroutine 2 [running]:
-go.dedis.ch/onet/v3/tracing.tg()
+github.com/csanti/onet/tracing.tg()
 /home/foo//onet/tracing/logger_test.go:116 +0x44
-created by go.dedis.ch/onet/v3/tracing.TestGor
+created by github.com/csanti/onet/tracing.TestGor
 /home/foo//onet/tracing/logger_test.go:108 +0x68
 `, `goroutine 1 [runnable]:
 sync.(*WaitGroup).Wait(0xc0001ce070)
 /usr/local/Cellar/go/1.13.3/libexec/src/sync/waitgroup.go:103 +0x148
-go.dedis.ch/onet/v3/tracing.tg()
+github.com/csanti/onet/tracing.tg()
 /home/foo//onet/tracing/logger_test.go:136 +0x183
-created by go.dedis.ch/onet/v3/tracing.TestGor
+created by github.com/csanti/onet/tracing.TestGor
 /home/foo//onet/tracing/logger_test.go:107 +0x50
 `},
 	{
 		`goroutine 2 [running]:
 runtime/debug.Stack(0x3, 0x3, 0xc00042dfb8)
 	/usr/local/Cellar/go/1.13.3/libexec/src/runtime/debug/stack.go:24 +0xab
-go.dedis.ch/onet/v3/log.Stack(...)
+github.com/csanti/onet/log.Stack(...)
 	/home/foo//onet/log/testutil.go:105
-go.dedis.ch/onet/v3/tracing.subgo(0xc000388410)
+github.com/csanti/onet/tracing.subgo(0xc000388410)
 	/home/foo//onet/tracing/logger_test.go:85 +0x87
-created by go.dedis.ch/onet/v3/tracing.goroutines
+created by github.com/csanti/onet/tracing.goroutines
 	/home/foo//onet/tracing/logger_test.go:78 +0x209`,
 		`goroutine 1 [running]:
 runtime/debug.Stack(0x2, 0x3, 0xc0000c7f80)
 	/usr/local/Cellar/go/1.13.3/libexec/src/runtime/debug/stack.go:24 +0xab
-go.dedis.ch/onet/v3/log.Stack(...)
+github.com/csanti/onet/log.Stack(...)
 	/home/foo//onet/log/testutil.go:105
-go.dedis.ch/onet/v3/tracing.goroutines(0x0)
+github.com/csanti/onet/tracing.goroutines(0x0)
 	/home/foo//onet/tracing/logger_test.go:74 +0xc7
-go.dedis.ch/onet/v3/tracing.TestGoroutines.func1(0xc0001e8620, 0x0)
+github.com/csanti/onet/tracing.TestGoroutines.func1(0xc0001e8620, 0x0)
 	/home/foo//onet/tracing/logger_test.go:56 +0x39
-created by go.dedis.ch/onet/v3/tracing.TestGoroutines
+created by github.com/csanti/onet/tracing.TestGoroutines
 	/home/foo//onet/tracing/logger_test.go:55 +0x1eb`,
 	}}
 
@@ -280,7 +280,7 @@ func TestTraceID(t *testing.T) {
 		tr.PrintSingleSpans = 10
 		tr.TraceDebug = true
 	}
-	tr.AddEntryPoints("go.dedis.ch/onet/v3/tracing.setTraceID")
+	tr.AddEntryPoints("github.com/csanti/onet/tracing.setTraceID")
 	tr.AddDoneMsgs("done trace")
 	syncTrace[0] = make(chan bool, 2)
 	syncTrace[1] = make(chan bool, 2)

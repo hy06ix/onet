@@ -3,8 +3,8 @@ package onet
 import (
 	"sync"
 
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/network"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/network"
 	"golang.org/x/xerrors"
 	uuid "gopkg.in/satori/go.uuid.v1"
 )

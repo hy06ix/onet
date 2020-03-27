@@ -20,8 +20,8 @@ import (
 	"go.dedis.ch/kyber/v3/sign/bls"
 	"go.dedis.ch/kyber/v3/util/key"
 	"go.dedis.ch/kyber/v3/util/random"
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/network"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/network"
 	"go.dedis.ch/protobuf"
 	"golang.org/x/xerrors"
 )

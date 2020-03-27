@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"go.dedis.ch/onet/v3"
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/tracing"
+	"github.com/csanti/onet"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/tracing"
 )
 
 // Import this service for most automatic use of the tracing system.

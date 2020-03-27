@@ -5,7 +5,7 @@ import (
 
 	_ "go.dedis.ch/kyber/v3/group/edwards25519"
 	"go.dedis.ch/kyber/v3/suites"
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 )
 
 var tSuite = suites.MustFind("Ed25519")

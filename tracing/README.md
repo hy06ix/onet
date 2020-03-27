@@ -5,7 +5,7 @@
 Import the tracing service:
 
 ```
-import _ go.dedis.ch/onet/v3/tracing/service
+import _ github.com/csanti/onet/tracing/service
 ```
 
 Sign up on https://honeycomb.io and get an API key.

@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"go.dedis.ch/kyber/v3/suites"
-	"go.dedis.ch/onet/v3"
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet"
+	"github.com/csanti/onet/log"
 )
 
 var tSuite = suites.MustFind("Ed25519")

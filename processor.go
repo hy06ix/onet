@@ -13,8 +13,8 @@ import (
 	"strings"
 	"sync"
 
-	"go.dedis.ch/onet/v3/log"
-	"go.dedis.ch/onet/v3/network"
+	"github.com/csanti/onet/log"
+	"github.com/csanti/onet/network"
 	"go.dedis.ch/protobuf"
 	"golang.org/x/xerrors"
 )

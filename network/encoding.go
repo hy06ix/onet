@@ -12,7 +12,7 @@ import (
 	"golang.org/x/xerrors"
 
 	"go.dedis.ch/kyber/v3"
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 	"go.dedis.ch/protobuf"
 	uuid "gopkg.in/satori/go.uuid.v1"
 )

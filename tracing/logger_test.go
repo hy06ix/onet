@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"go.dedis.ch/onet/v3/log"
+	"github.com/csanti/onet/log"
 
 	"go.dedis.ch/kyber/v3/suites"
 
@@ -21,7 +21,7 @@ func TestStack(t *testing.T) {
 	sc, tr := newSimulLogger()
 	defer log.UnregisterLogger(tr.loggerID)
 	tr.PrintSingleSpans = 10
-	tr.AddEntryPoints("go.dedis.ch/onet/v3/tracing.one")
+	tr.AddEntryPoints("github.com/csanti/onet/tracing.one")
 	tr.AddDoneMsgs(doneMeasuring)
 	one(tr, 1)
 	one(tr, 2)
@@ -56,7 +56,7 @@ func TestGoroutines(t *testing.T) {
 	sc, tr := newSimulLogger()
 	defer log.UnregisterLogger(tr.loggerID)
 	//tr.PrintSingleSpans = 10
-	tr.AddEntryPoints("go.dedis.ch/onet/v3/tracing.goroutines")
+	tr.AddEntryPoints("github.com/csanti/onet/tracing.goroutines")
 	tr.AddDoneMsgs("done goroutine")
 	goroutines(0)
 	sc.waitAndPrint()
