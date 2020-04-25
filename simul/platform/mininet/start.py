@@ -327,12 +327,12 @@ if __name__ == '__main__':
             dbg( 2, "Starting remotely on nets", otherNets)
         for (server, mn, nbr) in otherNets:
             dbg( 3, "Cleaning up", server )
-            #call("ssh %s 'mn -c; pkill -9 -f start.py' > /dev/null 2>&1" % server, shell=True)
+            call("ssh %s 'mn -c; pkill -9 -f start.py' > /dev/null 2>&1" % server, shell=True)
             dbg( 3, "Going to copy things %s to %s and run %s hosts in net %s" % \
                   (list_file, server, nbr, mn) )
             shutil.rmtree('config', ignore_errors=True)
-            # call("scp -q * %s %s:" % (list_file, server), shell=True)
-            call("scp * %s %s:" % (list_file, server), shell=True)
+            call("scp -q * %s %s:" % (list_file, server), shell=True)
+            #call("scp * %s %s:" % (list_file, server), shell=True)
             threads.append(threading.Thread(target=call_other, args=[server, list_file]))
 
         time.sleep(1)
