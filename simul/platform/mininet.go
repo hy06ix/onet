@@ -298,7 +298,7 @@ func (m *MiniNet) Start(args ...string) error {
 	go func() {
 		config := strings.Split(m.config, "\n")
 		sort.Strings(config)
-		err := SSHRunStdout(m.Login, m.External, "cd ~/mininet_run; ./start.py list go")
+		err := SSHRunStdout(m.Login, m.External, "cd mininet_run; ./start.py list go")
 		if err != nil {
 			log.Lvl3(err)
 		}
