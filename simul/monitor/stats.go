@@ -10,8 +10,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/hy06ix/onet/log"
 	"github.com/montanaflynn/stats"
-	"github.com/csanti/onet/log"
 	"golang.org/x/xerrors"
 )
 

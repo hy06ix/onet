@@ -8,12 +8,12 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.dedis.ch/kyber/v3/suites"
 	"go.dedis.ch/kyber/v3/util/key"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
 )
 
 var prefix = "127.0.0.1:"

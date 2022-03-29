@@ -3,7 +3,7 @@ package onet
 import (
 	"testing"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 // To avoid setting up testing-verbosity in all tests

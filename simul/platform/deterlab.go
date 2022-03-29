@@ -31,9 +31,9 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
-	"github.com/csanti/onet"
-	"github.com/csanti/onet/app"
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet"
+	"github.com/hy06ix/onet/app"
+	"github.com/hy06ix/onet/log"
 	"golang.org/x/xerrors"
 )
 

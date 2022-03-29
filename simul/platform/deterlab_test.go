@@ -3,8 +3,8 @@ package platform
 import (
 	"testing"
 
+	"github.com/hy06ix/onet/log"
 	"github.com/stretchr/testify/require"
-	"github.com/csanti/onet/log"
 )
 
 func TestDeterlab_parseHosts(t *testing.T) {

@@ -14,11 +14,11 @@ import (
 	"net"
 	"time"
 
+	"github.com/hy06ix/onet/log"
 	"go.dedis.ch/kyber/v3"
 	"go.dedis.ch/kyber/v3/sign/schnorr"
 	"go.dedis.ch/kyber/v3/util/encoding"
 	"go.dedis.ch/kyber/v3/util/random"
-	"github.com/csanti/onet/log"
 	"golang.org/x/xerrors"
 )
 

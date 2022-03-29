@@ -6,7 +6,7 @@ import (
 	"path"
 	"runtime"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 // GetConfigPath returns the location for which the configuration files are stored.

@@ -6,7 +6,7 @@ import (
 
 	"io/ioutil"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 func TestLocal(t *testing.T) {

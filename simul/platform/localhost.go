@@ -12,10 +12,10 @@ import (
 
 	"time"
 
-	"github.com/csanti/onet"
-	"github.com/csanti/onet/app"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/simul/monitor"
+	"github.com/hy06ix/onet"
+	"github.com/hy06ix/onet/app"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/simul/monitor"
 	"golang.org/x/xerrors"
 )
 

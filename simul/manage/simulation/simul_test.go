@@ -7,9 +7,9 @@ import (
 
 	"strings"
 
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/simul"
 	"github.com/stretchr/testify/assert"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/simul"
 )
 
 func TestSimulation(t *testing.T) {

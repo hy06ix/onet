@@ -15,8 +15,8 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"go.dedis.ch/protobuf"
 	"golang.org/x/xerrors"
 	graceful "gopkg.in/tylerb/graceful.v1"

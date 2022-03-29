@@ -10,9 +10,9 @@ import (
 	"math/rand"
 	"sort"
 
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"go.dedis.ch/kyber/v3"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
 	"golang.org/x/xerrors"
 	uuid "gopkg.in/satori/go.uuid.v1"
 )

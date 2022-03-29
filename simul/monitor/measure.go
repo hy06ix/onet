@@ -7,7 +7,7 @@ import (
 
 	"sync"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 	"golang.org/x/xerrors"
 )
 

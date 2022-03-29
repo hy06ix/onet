@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/hy06ix/onet/log"
 	"github.com/stretchr/testify/require"
-	"github.com/csanti/onet/log"
 	"golang.org/x/xerrors"
 )
 

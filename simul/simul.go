@@ -15,8 +15,8 @@ import (
 	"flag"
 	"os"
 
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/simul/platform"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/simul/platform"
 )
 
 // The address of this server - if there is only one server in the config

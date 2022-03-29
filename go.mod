@@ -3,7 +3,7 @@ module github.com/hy06ix/onet
 require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/StackExchange/wmi v1.2.1 // indirect
-	github.com/csanti/onet v0.0.0-20200427052914-ff14cd116f04
+	github.com/hy06ix/onet v0.0.0-20200427052914-ff14cd116f04
 	github.com/daviddengcn/go-colortext v0.0.0-20180409174941-186a3d44e920
 	github.com/gorilla/websocket v1.4.0
 	github.com/honeycombio/beeline-go v0.4.11

@@ -3,8 +3,8 @@ package onet
 import (
 	"testing"
 
+	"github.com/hy06ix/onet/log"
 	"github.com/stretchr/testify/require"
-	"github.com/csanti/onet/log"
 	bbolt "go.etcd.io/bbolt"
 	uuid "gopkg.in/satori/go.uuid.v1"
 )

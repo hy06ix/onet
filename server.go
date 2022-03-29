@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/hy06ix/onet/cfgpath"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"go.dedis.ch/kyber/v3"
-	"github.com/csanti/onet/cfgpath"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
 	"golang.org/x/xerrors"
 	"rsc.io/goversion/version"
 )

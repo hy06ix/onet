@@ -14,8 +14,8 @@ import (
 	"os"
 	"path"
 
+	"github.com/hy06ix/onet/log"
 	"github.com/stretchr/testify/assert"
-	"github.com/csanti/onet/log"
 )
 
 func TestMiniNet_getHostList(t *testing.T) {

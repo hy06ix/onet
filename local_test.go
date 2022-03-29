@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"github.com/stretchr/testify/require"
 	"go.dedis.ch/kyber/v3/suites"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
 )
 
 var tSuite = suites.MustFind("Ed25519")

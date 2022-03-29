@@ -1,7 +1,7 @@
 package onet
 
 import (
-	"github.com/csanti/onet/network"
+	"github.com/hy06ix/onet/network"
 	uuid "gopkg.in/satori/go.uuid.v1"
 )
 

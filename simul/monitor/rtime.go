@@ -5,7 +5,7 @@ package monitor
 import (
 	"syscall"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 // Converts microseconds to seconds.

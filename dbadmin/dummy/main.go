@@ -13,12 +13,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/csanti/onet/network"
+	"github.com/hy06ix/onet/network"
 
 	"go.dedis.ch/kyber/v3/group/edwards25519"
 
-	"github.com/csanti/onet"
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet"
+	"github.com/hy06ix/onet/log"
 	"go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 )

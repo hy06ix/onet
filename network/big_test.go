@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 /*

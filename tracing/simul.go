@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 // The simulCollector is a testing structure that allows to collect all sent

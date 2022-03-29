@@ -11,12 +11,12 @@ import (
 	"strings"
 	"time"
 
+	"github.com/hy06ix/onet"
+	"github.com/hy06ix/onet/cfgpath"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"go.dedis.ch/kyber/v3/util/encoding"
 	"go.dedis.ch/kyber/v3/util/key"
-	"github.com/csanti/onet"
-	"github.com/csanti/onet/cfgpath"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
 	"golang.org/x/xerrors"
 )
 

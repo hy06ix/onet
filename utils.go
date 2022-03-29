@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 
 	"github.com/BurntSushi/toml"
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 	"golang.org/x/xerrors"
 )
 

@@ -16,11 +16,11 @@ import (
 	"github.com/shirou/gopsutil/load"
 	"github.com/shirou/gopsutil/net"
 
-	"github.com/csanti/onet/network"
+	"github.com/hy06ix/onet/network"
 
-	"github.com/csanti/onet"
+	"github.com/hy06ix/onet"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 // The TraceLogger implements the interface Logger to be registered in onet/log.
@@ -84,13 +84,13 @@ func (logger *TraceLogger) GetLoggerInfo() *log.LoggerInfo {
 //both for the servie-calls over websockets, as well as the protocol-messages.
 func (logger *TraceLogger) AddOnetDefaults(si *network.ServerIdentity) {
 	logger.AddEntryPoints(
-		"github.com/csanti/onet.wsHandler.ServeHTTP",
-		"github.com/csanti/onet/network.(*BlockingDispatcher).Dispatch",
-		"github.com/csanti/onet/network.(*RoutineDispatcher).Dispatch",
+		"github.com/hy06ix/onet.wsHandler.ServeHTTP",
+		"github.com/hy06ix/onet/network.(*BlockingDispatcher).Dispatch",
+		"github.com/hy06ix/onet/network.(*RoutineDispatcher).Dispatch",
 		"go.dedis.ch/cothority/v3/blscosi/protocol.(*SubBlsCosi).dispatchLeaf",
-		"github.com/csanti/onet.(*TreeNodeInstance).dispatchMsgToProtocol",
-		"github.com/csanti/onet.(*Overlay).TransmitMsg",
-		"github.com/csanti/onet.(*TreeNodeInstance).dispatchMsgReader")
+		"github.com/hy06ix/onet.(*TreeNodeInstance).dispatchMsgToProtocol",
+		"github.com/hy06ix/onet.(*Overlay).TransmitMsg",
+		"github.com/hy06ix/onet.(*TreeNodeInstance).dispatchMsgReader")
 	logger.AddDoneMsgs("ws close", "done tracing")
 
 	logger.defaultFields["nodeName"] = si.String()
@@ -130,7 +130,7 @@ func (logger *TraceLogger) AddStats(c *onet.Context, repeat time.Duration) {
 				// Create a new trace that points to a dummy stackEntry,
 				//so the status can be sent to the service.
 				t, _ := logger.newTrace(context.TODO(), "",
-					stackEntry{pkgPath: "github.com/csanti/onet/honeycomb",
+					stackEntry{pkgPath: "github.com/hy06ix/onet/honeycomb",
 						method: "stats"})
 				t.add("status", c.ReportStatus())
 				t.send()

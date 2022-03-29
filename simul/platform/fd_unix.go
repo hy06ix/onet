@@ -5,7 +5,7 @@ package platform
 import (
 	"syscall"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 	"golang.org/x/xerrors"
 )
 

@@ -6,12 +6,12 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
-	"github.com/csanti/onet"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
-	"github.com/csanti/onet/simul"
-	"github.com/csanti/onet/simul/manage"
-	"github.com/csanti/onet/simul/monitor"
+	"github.com/hy06ix/onet"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
+	"github.com/hy06ix/onet/simul"
+	"github.com/hy06ix/onet/simul/manage"
+	"github.com/hy06ix/onet/simul/monitor"
 	"golang.org/x/xerrors"
 )
 

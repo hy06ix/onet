@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/log"
 )
 
 func TestNewDataFilter(t *testing.T) {

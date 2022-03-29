@@ -20,8 +20,8 @@ import (
 	"io/ioutil"
 
 	"github.com/BurntSushi/toml"
-	"github.com/csanti/onet/app"
-	"github.com/csanti/onet/log"
+	"github.com/hy06ix/onet/app"
+	"github.com/hy06ix/onet/log"
 	"golang.org/x/xerrors"
 )
 
@@ -91,7 +91,7 @@ func NewPlatform(t string) Platform {
 		p = &MiniNet{}
 		_, err := os.Stat("server_list")
 		if os.IsNotExist(err) {
-			path := build.Default.GOPATH + "/src/github.com/csanti/onet/simul/platform/mininet/"
+			path := build.Default.GOPATH + "/src/github.com/hy06ix/onet/simul/platform/mininet/"
 			var command string
 			if app.InputYN(true, "Do you want to run mininet on ICCluster?") {
 				command = path + "setup_iccluster.sh"

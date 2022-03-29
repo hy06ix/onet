@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/hy06ix/onet/log"
 	"go.dedis.ch/kyber/v3"
 	"go.dedis.ch/kyber/v3/suites"
 	"go.dedis.ch/kyber/v3/util/encoding"
 	"go.dedis.ch/kyber/v3/util/key"
-	"github.com/csanti/onet/log"
 	"go.dedis.ch/protobuf"
 	"golang.org/x/xerrors"
 	uuid "gopkg.in/satori/go.uuid.v1"

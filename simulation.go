@@ -9,11 +9,11 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"go.dedis.ch/kyber/v3"
 	"go.dedis.ch/kyber/v3/suites"
 	"go.dedis.ch/kyber/v3/util/key"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
 	"golang.org/x/xerrors"
 )
 

@@ -11,8 +11,8 @@ import (
 	"go.dedis.ch/kyber/v3/suites"
 	"golang.org/x/xerrors"
 
+	"github.com/hy06ix/onet/log"
 	"go.dedis.ch/kyber/v3"
-	"github.com/csanti/onet/log"
 	"go.dedis.ch/protobuf"
 	uuid "gopkg.in/satori/go.uuid.v1"
 )

@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"sync"
 
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	bbolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 )

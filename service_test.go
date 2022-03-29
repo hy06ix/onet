@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/network"
 	"github.com/stretchr/testify/require"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/network"
 	"go.dedis.ch/protobuf"
 	"golang.org/x/xerrors"
 )

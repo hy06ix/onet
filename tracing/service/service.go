@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/csanti/onet"
-	"github.com/csanti/onet/log"
-	"github.com/csanti/onet/tracing"
+	"github.com/hy06ix/onet"
+	"github.com/hy06ix/onet/log"
+	"github.com/hy06ix/onet/tracing"
 )
 
 // Import this service for most automatic use of the tracing system.
