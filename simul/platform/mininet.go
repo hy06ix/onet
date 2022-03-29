@@ -102,7 +102,7 @@ func (m *MiniNet) Configure(pc *Config) {
 	m.mininetDir = filepath.Join(m.mininetDir, "mininet")
 	m.buildDir = m.wd + "/build"
 	m.deployDir = m.wd + "/deploy"
-	m.Login = "root"
+	m.Login = "ubuntu"
 	log.ErrFatal(m.parseServers())
 	m.External = m.HostIPs[0]
 	m.ProxyAddress = "localhost"

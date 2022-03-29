@@ -152,12 +152,12 @@ func simpleSe(path ...string) (ses []stackEntry) {
 
 func TestNewStacked(t *testing.T) {
 	ctx, hcTr := newSimulTrace(context.TODO(), "")
-	tr, _ := newTraceWrapper(ctx, hcTr, simpleSe("root"))
-	stack1 := simpleSe("root", "one")
-	stack12 := simpleSe("root", "one", "two")
-	stack2 := simpleSe("root", "two")
-	stack23 := simpleSe("root", "two", "three")
-	stack234 := simpleSe("root", "two", "three", "four")
+	tr, _ := newTraceWrapper(ctx, hcTr, simpleSe("ubuntu"))
+	stack1 := simpleSe("ubuntu", "one")
+	stack12 := simpleSe("ubuntu", "one", "two")
+	stack2 := simpleSe("ubuntu", "two")
+	stack23 := simpleSe("ubuntu", "two", "three")
+	stack234 := simpleSe("ubuntu", "two", "three", "four")
 	tr.stackToSpan(stack1).log(1, "one-1")
 	tr.stackToSpan(stack12).log(1, "one/two-1")
 	tr.stackToSpan(stack12).log(1, "one/two-2")
@@ -184,7 +184,7 @@ func TestNewStacked(t *testing.T) {
 		`method:"four"`,
 		`method:"three"`,
 		`log.Lvl:1;log.Msg:"two-3";method:"two"`,
-		`method:"two"`, `method:"root"`)
+		`method:"two"`, `method:"ubuntu"`)
 }
 
 func TestTraceWrapper_Add(t *testing.T) {
