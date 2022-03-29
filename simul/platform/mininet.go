@@ -242,7 +242,7 @@ func (m *MiniNet) Deploy(rc *RunConfig) error {
 	// Verify the installation is correct
 	gw := m.HostIPs[0]
 	log.Lvl2("Verifying configuration on", gw)
-	out, err := exec.Command("ssh", "root@"+gw, "which mn").Output()
+	out, err := exec.Command("ssh", "ubuntu@"+gw, "which mn").Output()
 	if err != nil || !strings.HasSuffix(string(out), "mn\n") {
 		log.Error("While trying to connect to", gw, err)
 		log.Fatal("Please verify installation of mininet or run\n" +
