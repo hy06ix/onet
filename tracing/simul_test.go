@@ -39,15 +39,15 @@ func TestSimulHC(t *testing.T) {
 
 func TestNewTrace(t *testing.T) {
 	ctx, hcTr := newSimulTrace(context.TODO(), "")
-	tr, _ := newTraceWrapper(ctx, hcTr, simpleSe("ubuntu"))
+	tr, _ := newTraceWrapper(ctx, hcTr, simpleSe("root"))
 	tr.hcTrace.AddField("one", 2)
 	tr.send()
-	testSentTrace(t, tr, `method:"ubuntu";one:2`)
+	testSentTrace(t, tr, `method:"root";one:2`)
 }
 
 func TestNewTraceSpan(t *testing.T) {
 	ctx, hcTr := newSimulTrace(context.TODO(), "")
-	tr, child := newTraceWrapper(ctx, hcTr, simpleSe("ubuntu", "one"))
+	tr, child := newTraceWrapper(ctx, hcTr, simpleSe("root", "one"))
 	child.log(1, "logging")
 	tr.hcTrace.AddField("two", 2)
 	tr.hcTrace.(*simulTrace).printTrace()
@@ -55,7 +55,7 @@ func TestNewTraceSpan(t *testing.T) {
 	testSentTrace(t, tr,
 		`log.Lvl:1;log.Msg:"logging";method:"one";two:2`,
 		`method:"one";two:2`,
-		`method:"ubuntu";two:2`)
+		`method:"root";two:2`)
 }
 
 func TestHCS(t *testing.T) {

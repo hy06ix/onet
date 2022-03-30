@@ -102,7 +102,7 @@ func (m *MiniNet) Configure(pc *Config) {
 	m.mininetDir = filepath.Join(m.mininetDir, "mininet")
 	m.buildDir = m.wd + "/build"
 	m.deployDir = m.wd + "/deploy"
-	m.Login = "ubuntu"
+	m.Login = "root"
 	log.ErrFatal(m.parseServers())
 	m.External = m.HostIPs[0]
 	m.ProxyAddress = "localhost"
@@ -242,7 +242,7 @@ func (m *MiniNet) Deploy(rc *RunConfig) error {
 	// Verify the installation is correct
 	gw := m.HostIPs[0]
 	log.Lvl2("Verifying configuration on", gw)
-	out, err := exec.Command("ssh", "ubuntu@"+gw, "which mn").Output()
+	out, err := exec.Command("ssh", "root@"+gw, "which mn").Output()
 	if err != nil || !strings.HasSuffix(string(out), "mn\n") {
 		log.Error("While trying to connect to", gw, err)
 		log.Fatal("Please verify installation of mininet or run\n" +
