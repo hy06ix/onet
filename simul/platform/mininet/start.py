@@ -331,7 +331,9 @@ if __name__ == '__main__':
             dbg( 3, "Going to copy things %s to %s and run %s hosts in net %s" % \
                   (list_file, server, nbr, mn) )
             shutil.rmtree('config', ignore_errors=True)
+            dbg( 3, "After remove tree", server )
             call("scp -q * %s %s:" % (list_file, server), shell=True)
+            dbg( 3, "After copy file", server )
             #call("scp * %s %s:" % (list_file, server), shell=True)
             threads.append(threading.Thread(target=call_other, args=[server, list_file]))
 
