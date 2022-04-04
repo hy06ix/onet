@@ -64,6 +64,7 @@ func Start(rcs ...string) {
 	if simul == "" {
 		startBuild()
 	} else {
+		log.Lvl1("Run simulationg with ", suite, serverAddress, simul, monitorAddress)
 		err := platform.Simulate(suite, serverAddress, simul, monitorAddress)
 		log.ErrFatal(err)
 	}
